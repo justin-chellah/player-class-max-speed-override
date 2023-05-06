@@ -1,0 +1,35 @@
+"Games"
+{
+	"tf"
+	{
+		"Offsets"
+		{
+			"TFPlayerClassData_t::m_flMaxSpeed"
+			{
+				"windows"	"640"
+				"linux"		"640"
+			}
+		}
+
+		"Signatures"
+		{
+			"GetPlayerClassData"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x69\x4D\x08\xF0\x08\x00\x00"
+				// 55 8B EC 69 4D 08 F0 08 00 00
+
+				"linux"		"@_Z18GetPlayerClassDataj"
+			}
+
+			"CTFPlayer::TeamFortress_CalculateMaxSpeed"
+			{
+				"library"	"server"
+				"windows"	"\x55\x8B\xEC\x83\xEC\x18\x83\x3D\x2A\x2A\x2A\x2A\x00\x56"
+				// 55 8B EC 83 EC 18 83 3D ? ? ? ? 00 56 
+
+				"linux"		"@_ZNK9CTFPlayer30TeamFortress_CalculateMaxSpeedEb"
+			}
+		}
+	}
+}
